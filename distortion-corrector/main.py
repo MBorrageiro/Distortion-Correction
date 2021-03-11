@@ -67,11 +67,11 @@ def calibrate_camera_intrinsics():
     print(f"\nRMS Error is {rms:.3f} pixels")
 
 
-if __name__=='__main__':
+def main():
     print("Starting program")
-    # init_project_dirs()
-    # extract_frames_from_video_input()
-    # extract_corners_from_images()
+    init_project_dirs()
+    extract_frames_from_video_input()
+    extract_corners_from_images()
     calibrate_camera_intrinsics()
 
     scene = app.plot_points_fisheye_undistort(
@@ -108,3 +108,7 @@ if __name__=='__main__':
     cv2.imwrite(os.path.join(result_fpath,"undistored_sample_img_no_border.jpg"), undist_img)
 
     print("Program completed!")
+
+
+if __name__=='__main__':
+    main()
