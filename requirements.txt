@@ -1,0 +1,6 @@
+opencv-python==3.4.11.41
+matplotlib==3.3.4
+nptyping==0.3.1
+scipy==1.6.1
+pandas==1.2.3
+ipython==7.21.0
